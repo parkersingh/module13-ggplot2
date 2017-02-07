@@ -48,10 +48,14 @@ ggplot(diamonds) +
 
 # Draw a plot with point geometry with the x-position mapped to `cut` and the y-position mapped to `clarity`
 # This creates a "grid" grouping the points
+ggplot(diamonds) +
+  geom_point(mapping = aes(x = cut, y = clarity))
 
 
 # Use the "jitter" position adjustment to keep the points from all overlapping!
 # (This works a little better with a sample of diamond data, such as from the previous exercise).
+ggplot(diamonds) +
+  geom_point(mapping = aes(x = cut, y = clarity), position = "jitter")
 
 
 
